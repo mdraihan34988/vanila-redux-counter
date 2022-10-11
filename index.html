@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redux Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+</head>
+<body>
+    
+    <div class="max-w-md mx-auto mt-2 space-y-1">
+        <div class="p-2 h-auto flex flex-col items-center justify-center space-y-1 bg-slate-200 rounded shadow">
+            <h1 class="max-w-md mx-auto text-center text-2xl font-bold text-yellow-900">
+                Multiple Counter - Dashboard
+            </h1>
+            <span class="font-bold text-current text-violet-900 text-xl">Active Counter : <span id="activeCounter"></span></span>
+            <div class="text-lg font-bold text-green-900">Total Count : <span id="dashboard"></span></div>
+            <!-- <div class="text-lg font-bold text-stone-800">Total Count : <span id="dashboard"></span></div> -->
+        </div>
+    </div>
+    <div id="newCounter" class="max-w-md mx-auto mt-2 space-y-2">
+        <div class="p-3 h-auto flex flex-col items-center justify-center space-y-2 bg-white rounded shadow">
+            <span class="font-bold text-violet-900">Counter 1</span>
+            <div class="relative">
+                <input id="modifiedEl0" type="number" id="floating_outlined" value="1" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-lg text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" "  min="1" oninput="if(this.value<1) this.value = 1" />
+                <label for="floating_outlined" class="absolute text-lg text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Increment/Decrement By </label>
+            </div>
+            <div id="counterEl0" class="text-2xl font-semibold text-rose-900"></div>
+            
+            <div class="flex space-x-3">
+                <button id="incrementEl0" class="bg-indigo-400 text-white px-3 py-2 rounded shadow">
+                    Increment (+)
+                </button>
+                <button id="decrementEl0" class="bg-red-400 text-white px-3 py-2 rounded shadow">
+                    Decrement (-)
+                </button>
+                <button id="clearCounterEl0" class="bg-yellow-500 text-white px-3 py-2 rounded shadow">
+                    Clear
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-md mx-auto space-y-5">
+        <div class="p-4 h-auto flex flex-col items-end justify-center space-y-5">
+            <div class="flex space-x-3">
+                <button id="addAnotherCounter" class="bg-indigo-400 text-white px-3 py-2 rounded shadow ">
+                    + Add Counter
+                </button>
+                <button id="resetCounter" class="bg-red-400 text-white px-3 py-2 rounded shadow">
+                    Reset
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
